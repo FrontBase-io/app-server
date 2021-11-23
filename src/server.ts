@@ -14,6 +14,10 @@ app.use(
   )
 );
 
+app.use((req, res) =>
+  res.send("FrontBase is not hosting a site at this address.")
+);
+
 app.listen(port, () => {
   console.log(
     `App-Server is now listening for VHOST requests on http://localhost:${port}`
